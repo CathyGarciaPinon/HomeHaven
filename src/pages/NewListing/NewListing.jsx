@@ -18,7 +18,7 @@ export default function NewListingForm({ addListing }) {
       <div className="form-container">
         <form className="NewListingForm" onSubmit={submitAddListing}>
           <label>Property Photo</label>
-          <input type="text" name="Photo" value={formData.text} onChange={handleChange} placeholder="Upload Image"required />
+          <input type="image" alt="image" value={formData.text} onChange={handleChange} placeholder="Upload Image"required />
           <label>Location</label>
           <input type="text" name="Location" value={formData.text} onChange={handleChange} placeholder="City, State"required />
           <label>Description</label>

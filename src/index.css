@@ -78,16 +78,15 @@ code {
 }
 
 .form-container {
-  /* padding: 4vmin; */
-  /* padding: 30px 30px;
-  background-color: var(--tan-1);
+  display: grid;
+  grid-template-columns: auto;
+  background-color: hsla(200, 3%, 17%, 0.43);
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  padding: 4vmin;
   border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin; */
-  background-color: hsla(201, 100%, 6%, 0.6);
-  padding: 30px 30px;
-  min-width: 300px;
-  width: 100%;
-  max-width: 400px;
+  border-radius: 1vmin;
   
 }
 
