@@ -78,11 +78,21 @@ code {
 }
 
 .form-container {
-  padding: 4vmin;
+  /* padding: 4vmin; */
+  /* padding: 30px 30px;
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
+  border-radius: 1vmin; */
+  background-color: hsla(201, 100%, 6%, 0.6);
+  padding: 30px 30px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 400px;
+  
 }
+
+
+
 
 p.error-message {
   color: var(--orange);

@@ -4,6 +4,7 @@ module.exports = {
   index,
   show,
   create,
+  delete: deleteListing,
 };
 
 async function index(req, res) {
@@ -12,12 +13,18 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  const listing = await Note.findById(req.params.id);
+  const listing = await Listing.findById(req.params.id);
   res.json(listing);
 }
 
 async function create(req, res) {
   req.body.user = req.user._id;
   const listing = await Listing.create(req.body);
+  res.json(listing);
+}
+
+async function deleteListing(req, res) {
+  req.body.user = req.user._id;
+  const listing = await Listing.findByIdAndDelete(req.params.id);
   res.json(listing);
 }

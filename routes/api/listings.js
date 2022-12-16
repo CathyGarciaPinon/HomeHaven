@@ -3,13 +3,13 @@ const router = express.Router();
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 const listingsCtrl = require('../../controllers/api/listings');
 
-// GET /api/notes
+// GET /api/listings
 router.get('/', listingsCtrl.index);
-// GET /api/notes/:id
+// GET /api/listings/:id
 router.get('/:id', listingsCtrl.show);
-// POST /api/notes
+// POST /api/listings
 router.post('/', ensureLoggedIn, listingsCtrl.create);
-// DELETE /api/notes/:id
-// router.delete('/:id', ensureLoggedIn, listingsCtrl.delete);
+// DELETE /api/listing/:id
+router.delete('/:id', ensureLoggedIn, listingsCtrl.delete);
 
 module.exports = router;
