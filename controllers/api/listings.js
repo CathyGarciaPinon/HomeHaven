@@ -1,4 +1,4 @@
-const Listing = required('../../models/listing');
+const Listing = require('../../models/listing');
 
 module.exports = {
   index,
@@ -19,6 +19,7 @@ async function show(req, res) {
 
 async function create(req, res) {
   req.body.user = req.user._id;
+  console.log(req.body)
   const listing = await Listing.create(req.body);
   res.json(listing);
 }

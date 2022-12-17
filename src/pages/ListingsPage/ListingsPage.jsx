@@ -1,5 +1,10 @@
-export default function ListingsPage() {
+import ListingItemPage from "../ListingItemPage/ListingItemPage";
+
+
+export default function ListingsPage({ user, listings}) {
   return (
-    <h1>Find your HomeHaven</h1>
+    <>
+    <ul><ListingItemPage listings={listings}/></ul>
+    </>
   );
 }
