@@ -7,10 +7,11 @@ export default function ListingItemPage({ listings, handleDelete }) {
       { listings.length ?
       listings.map((l, idx) => 
           <div className="ListingItem" key={idx}>
-              {l.photo && <img src={l.photo} alt="image" />}
-              <span>Entered: {new Date(l.updatedAt).toLocaleDateString()}</span>
-              &nbsp; -- &nbsp;
+              <span>{l.photo && <img src={l.photo} alt="image" />}</span>
+              {/* <span>Entered: {new Date(l.updatedAt).toLocaleDateString()}</span> */}
               <span>{l.price}</span>
+              &nbsp; - &nbsp;
+              <span>{l.location}</span>
               <button onClick={() => handleDelete(l._id)}>Delete</button>
           </div>)         
       :
