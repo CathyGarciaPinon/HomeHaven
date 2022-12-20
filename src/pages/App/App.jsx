@@ -8,7 +8,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import NewListing from '../NewListing/NewListing';
 import ListingsPage from '../ListingsPage/ListingsPage';
-// import ListingItemPage from '../ListingItemPage/ListingItemPage';
+import ListingDetailPage from '../ListingDetailPage/ListingDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -42,6 +42,7 @@ export default function App() {
             <Routes>
               <Route path="/listings/new" element={<NewListing addListing={addListing}/>} handleDelete={handleDelete} />
               <Route path="/listings" element={<ListingsPage listings={listings}/>} handleDelete={handleDelete} />
+              <Route path="/details/:id" element={<ListingDetailPage listings={listings}/>} handleDelete={handleDelete} />
             </Routes>
           </>
           :
