@@ -6,6 +6,7 @@ export default function ListingItemPage({ listings, handleDelete }) {
 
   return (
       <>
+      <h1>All Current Listings</h1>
       { listings.length ?
         listings.map((l, idx) => 
           <div className="ListingItem" key={idx}>
@@ -13,10 +14,10 @@ export default function ListingItemPage({ listings, handleDelete }) {
                 <span>{l.photo && <img src={l.photo} alt="image" />}</span>
                 &nbsp;  &nbsp;
                 <span>{l.price}</span>
-                &nbsp; - &nbsp;
+                &nbsp;  &nbsp;
                 <span>{l.location}</span>
               </Link>
-              <button onClick={() => handleDelete(l._id)}>Delete</button>
+              
           </div>)         
       :
       <h3>Check back for new listings!</h3>

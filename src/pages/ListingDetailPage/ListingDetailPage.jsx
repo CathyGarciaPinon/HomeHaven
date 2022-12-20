@@ -19,19 +19,20 @@ export default function ListingDetailPage({ listings, handleDelete }) {
     <>
       {listingDetail ? 
         <>
+          <h1>Listing Details</h1>
           <div>
             <span>{listingDetail.photo && <img src={listingDetail.photo} alt="image" />}</span>
             &nbsp;  &nbsp;
-            <span>Location: {listingDetail.location}</span>
+            <li>Location: {listingDetail.location}</li>
             &nbsp; - &nbsp;
-            <span>Description: {listingDetail.description}</span>
+            <li>Description: {listingDetail.description}</li>
             &nbsp; - &nbsp;
-            <span>Price: {listingDetail.price}</span>
+            <li>Price: {listingDetail.price}</li>
             &nbsp; - &nbsp;
-            <span>Contact info: {listingDetail.seller}</span>
+            <li>Contact info: {listingDetail.seller}</li>
             &nbsp; - &nbsp;
-            <span>Entered: {new Date(listingDetail.updatedAt).toLocaleDateString()}</span>
-          
+            <li>Entered: {new Date(listingDetail.updatedAt).toLocaleDateString()}</li>
+            <button onClick={() => handleDelete(listingDetail._id)}>Delete</button>
           </div>
         </> 
         : 

@@ -28,6 +28,7 @@ export default function NewListingForm({ addListing }) {
 
   return (
     <div>
+      <h1>Enter New Listing information below</h1>
       <div className="form-container">
         <form className="NewListingForm" onSubmit={submitAddListing}>
           <label>Property Photo</label>
