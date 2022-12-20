@@ -16,7 +16,7 @@ export default function ListingItemPage({ listings, handleDelete }) {
                 &nbsp; - &nbsp;
                 <span>{l.location}</span>
               </Link>
-              {/* <button onClick={() => handleDelete(l._id)}>Delete</button> */}
+              <button onClick={() => handleDelete(l._id)}>Delete</button>
           </div>)         
       :
       <h3>Check back for new listings!</h3>

@@ -25,7 +25,6 @@ async function create(req, res) {
 }
 
 async function deleteListing(req, res) {
-  req.body.user = req.user._id;
   const listing = await Listing.findByIdAndDelete(req.params.id);
   res.json(listing);
 }
