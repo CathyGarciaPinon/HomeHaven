@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function NewListingForm({ addListing }) {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ export default function NewListingForm({ addListing }) {
     seller: ''
   });
   
+  const navigate = useNavigate();
+
+
   function handleChange(evt) {
     setFormData({...formData,[evt.target.name]: evt.target.value });
   }
@@ -23,6 +27,7 @@ export default function NewListingForm({ addListing }) {
       price: '',
       seller: ''
     });
+    navigate('/listings');
   }
 
 

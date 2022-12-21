@@ -20,6 +20,7 @@ export default function App() {
   async function addListing(listing) {
     const newListing = await listingsAPI.create(listing);
     setListings([...listings, newListing]);
+    navigate('/listings');
   }
 
   async function handleDelete(id) {

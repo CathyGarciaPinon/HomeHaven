@@ -29,6 +29,7 @@ app.use('/api/listings', require('./routes/api/listings'));
 
 
 
+
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
 app.get('/*', function(req, res) {

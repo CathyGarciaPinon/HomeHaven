@@ -12,7 +12,7 @@ router.post('/', ensureLoggedIn, listingsCtrl.create);
 // DELETE /api/listing/:id
 router.delete('/:id', ensureLoggedIn, listingsCtrl.delete);
 // UPDATE /api/listing/:id
-router.put('/:id', listingsCtrl.updateListing);
+router.put('/:id', ensureLoggedIn, listingsCtrl.updateListing);
 
 module.exports = router;
 

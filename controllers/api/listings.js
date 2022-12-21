@@ -32,14 +32,11 @@ async function deleteListing(req, res) {
 }
 
 async function updateListing(req, res) {
-  // try {
     console.log(req.body)
     const listing = await Listing.findByIdAndUpdate(
       {_id: req.params.id}, req.body, {new: true});
     console.log(listing)
     res.json(listing);
-  // } catch (err) {
-    // return get(err);
   }
-// }
+
 
