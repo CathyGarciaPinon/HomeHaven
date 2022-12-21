@@ -10,7 +10,7 @@ export default function ListingItemPage({ listings, handleDelete }) {
       { listings.length ?
         listings.map((l, idx) => 
           <div className="ListingItem" key={idx}>
-              <Link to={`/details/${l._id}`}>
+              <Link to={`/listings/${l._id}`}>
                 <span>{l.photo && <img src={l.photo} alt="image" />}</span>
                 &nbsp;  &nbsp;
                 <span>{l.price}</span>

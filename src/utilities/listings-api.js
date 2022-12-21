@@ -15,3 +15,7 @@ export async function create(listing) {
 export async function deleteListing(id) {
     return sendRequest(`${BASE_URL}/${id}`, "DELETE");
 }
+export async function updateListing(listingFormData, id) {
+  console.log(listingFormData);
+    return sendRequest(`${BASE_URL}/${id}`, "PUT", listingFormData);
+}
