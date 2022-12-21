@@ -1,0 +1,36 @@
+.ListingDetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ListingDetails {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 10vmin;
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.ListingPhoto img {
+  border-radius: 20px;
+
+}
+
+.ListingInfo li {
+  list-style-type: none;
+}
+
+.ListingButtons {
+  position: fixed;
+  bottom: 10%;
+}
+
+.ListingInfo {
+  padding: 30px;
+}

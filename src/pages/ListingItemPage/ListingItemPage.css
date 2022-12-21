@@ -1,0 +1,26 @@
+.Listings {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+}
+
+.ListingItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.ListingItem img {
+  border-radius: 20px;
+}
+
+a {
+  color: black;
+  
+}

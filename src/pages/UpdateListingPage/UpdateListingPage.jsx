@@ -28,6 +28,7 @@ export default function UpdateListingPage({listingDetail, handleUpdateListing, s
   return (
     <>
     <h1>Edit Listing</h1>
+    <div className="form-container">
         <form onSubmit={handleSubmit}>
           <label>Property Photo</label>
           <input type="text" name="photo" value={updateListing.photo} onChange={handleChange}  />
@@ -41,6 +42,7 @@ export default function UpdateListingPage({listingDetail, handleUpdateListing, s
           <input type="text" name="seller" value={updateListing.seller} onChange={handleChange} />
           <button type="submit" onSubmit={handleUpdateListing}>Update Listing</button>
         </form>
+      </div>
     </>
   );
 }

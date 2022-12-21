@@ -1,12 +1,6 @@
 /* CSS Custom Properties */
 :root {
   background-color: rgb(129, 113, 113 );
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --text-light: #968c84;
-  --text-dark: #615954;
 }
 
 *, *:before, *:after {
@@ -18,24 +12,24 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  -webkit-font-smoothing: antialiased;
+  /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--tan-4); */
   padding: 2vmin;
   height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
 }
 
 #root {
-  height: 100%;
+  /* height: 100%; */
 }
 
 .align-ctr {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .align-rt {
@@ -46,7 +40,7 @@ code {
   font-size: smaller;
 }
 
-.flex-ctr-ctr {
+.flex-ctr-ctr { 
   display: flex;
   justify-content: center;
   align-items: center;

@@ -7,10 +7,10 @@ import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import NewListing from '../NewListing/NewListing';
-import ListingsPage from '../ListingsPage/ListingsPage';
 import ListingDetailPage from '../ListingDetailPage/ListingDetailPage';
 import UpdateListingPage from '../UpdateListingPage/UpdateListingPage';
 import { DOM_KEY_LOCATION } from '@testing-library/user-event/dist/keyboard/types';
+import ListingItemPage from '../ListingItemPage/ListingItemPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -52,8 +52,8 @@ export default function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
+              <Route path="/" element={<ListingItemPage listings={listings} handleDelete={handleDelete} />} />
               <Route path="/listings/new" element={<NewListing addListing={addListing} handleDelete={handleDelete} />} />
-              <Route path="/listings" element={<ListingsPage listings={listings} handleDelete={handleDelete} />} />
               <Route path="/listings/:id" element={<ListingDetailPage listings={listings} handleDelete={handleDelete} handleUpdateListing={handleUpdateListing} />} />
             </Routes>
           </>
