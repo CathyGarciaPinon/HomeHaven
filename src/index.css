@@ -1,6 +1,6 @@
 /* CSS Custom Properties */
 :root {
-  background-color: rgb(129, 113, 113 );
+  background-color: rgb(146, 132, 132);
 }
 
 *, *:before, *:after {
@@ -12,9 +12,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  /* -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4); */
+  background-color: var(--tan-4);
   padding: 2vmin;
   height: 100vh;
 }
@@ -25,11 +25,11 @@ code {
 }
 
 #root {
-  /* height: 100%; */
+  height: 100%;
 }
 
 .align-ctr {
-  /* text-align: center; */
+  text-align: center;
 }
 
 .align-rt {
@@ -86,7 +86,7 @@ code {
 
 
 p.error-message {
-  color: var(--orange);
+  color: red;
   text-align: center;
 }
 
@@ -113,15 +113,15 @@ input {
   outline: none;
 }
 
-input:focus {
+/* input:focus {
   border-color: var(--orange);
-}
+} */
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: rgb(210, 166, 27 );
+  background-color: rgb(152, 135, 75);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -144,7 +144,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: rgb(210, 166, 27 );
+  background-color: rgb(152, 135, 75);
 }
 
 button[type="submit"] {

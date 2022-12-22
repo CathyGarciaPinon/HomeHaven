@@ -7,7 +7,7 @@
 
 .ListingDetails {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   background-color: white;
   padding: 20px;
   border-radius: 20px;
@@ -15,6 +15,7 @@
   width: 70vw;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .ListingPhoto img {
@@ -22,8 +23,11 @@
 
 }
 
-.ListingInfo li {
+li {
   list-style-type: none;
+  text-align: left;
+  line-height: 2;
+  font-weight: bold;
 }
 
 .ListingButtons {
@@ -33,4 +37,7 @@
 
 .ListingInfo {
   padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

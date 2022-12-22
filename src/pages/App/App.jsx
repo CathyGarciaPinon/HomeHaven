@@ -11,6 +11,7 @@ import ListingDetailPage from '../ListingDetailPage/ListingDetailPage';
 import UpdateListingPage from '../UpdateListingPage/UpdateListingPage';
 import { DOM_KEY_LOCATION } from '@testing-library/user-event/dist/keyboard/types';
 import ListingItemPage from '../ListingItemPage/ListingItemPage';
+import AboutPage from '../AboutPage/AboutPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -32,12 +33,12 @@ export default function App() {
 
   async function handleUpdateListing(listingFormData, id) {
     const listing = await listingsAPI.updateListing(listingFormData, id);
-    const updatedListings = listings.map(l => l._id === id? listing : l);
+    const updatedListings = listings.map(l => l._id === id ? listing : l);
     setListings(updatedListings);
-    
+
   }
 
-  useEffect(function() {
+  useEffect(function () {
     async function getListings() {
       const listings = await listingsAPI.getAll();
       setListings(listings);
@@ -48,17 +49,19 @@ export default function App() {
 
   return (
     <main className="App">
-      { user ?
-          <>
-            <NavBar user={user} setUser={setUser} />
-            <Routes>
-              <Route path="/" element={<ListingItemPage listings={listings} handleDelete={handleDelete} />} />
-              <Route path="/listings/new" element={<NewListing addListing={addListing} handleDelete={handleDelete} />} />
-              <Route path="/listings/:id" element={<ListingDetailPage listings={listings} handleDelete={handleDelete} handleUpdateListing={handleUpdateListing} />} />
-            </Routes>
-          </>
-          :
-          <AuthPage setUser={setUser} />
+      {user ?
+        <>
+          <NavBar user={user} setUser={setUser} />
+          <img className='logo' src="/logo512.png" />
+          <Routes>
+            <Route path="/" element={<ListingItemPage listings={listings} handleDelete={handleDelete} />} />
+            <Route path="/listings/new" element={<NewListing addListing={addListing} handleDelete={handleDelete} />} />
+            <Route path="/listings/:id" element={<ListingDetailPage listings={listings} handleDelete={handleDelete} handleUpdateListing={handleUpdateListing} user={user} />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </>
+        :
+        <AuthPage setUser={setUser} />
       }
     </main>
   );

@@ -8,14 +8,14 @@ export default function AuthPage({ setUser }) {
   return (
     <>
       <div className='full-screen-container'>
-        <h1>Welcome to HomeHaven</h1>
-        <h2>Auth Page</h2>
+      <img className='logo' src="/logo512.png" />
+        <h2>Please Log in or Sign Up</h2>
         <div className='login-container'>
           <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
-          { showSignUp ?
-              <SignUpForm setUser={setUser} />
-              :
-              <LoginForm setUser={setUser} />
+          {showSignUp ?
+            <SignUpForm setUser={setUser} />
+            :
+            <LoginForm setUser={setUser} />
           }
         </div>
       </div>

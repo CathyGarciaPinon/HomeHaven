@@ -9,12 +9,12 @@ export default function NewListingForm({ addListing }) {
     price: '',
     seller: ''
   });
-  
+
   const navigate = useNavigate();
 
 
   function handleChange(evt) {
-    setFormData({...formData,[evt.target.name]: evt.target.value });
+    setFormData({ ...formData, [evt.target.name]: evt.target.value });
   }
 
   function submitAddListing(evt) {
